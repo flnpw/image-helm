@@ -18,6 +18,7 @@ COPY --from=helm /usr/local/bin/helm /<wherever>/helm
 Using this image as a local installer:
 ```
 docker run --rm -ti \
+  --entrypoint='' \
   -v /usr/local/bin:/target \
   flnpw/helm \
   cp /usr/local/bin/helm /target
